@@ -21,5 +21,10 @@ public class City implements Serializable {
     public String getState() {
         return state;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%d, %s", id, state);
+    }
 }
 
