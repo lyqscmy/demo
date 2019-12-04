@@ -1,6 +1,7 @@
-package com.example.demo.Mapper;
+package com.example.demo.mapper;
 
-import com.example.demo.City;
+import com.example.demo.model.City;
+import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +13,14 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @MybatisTest
-@Transactional
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class CityMapperTest {
 
     @Autowired
     private CityMapper cityMapper;
 
+    @Autowired
+    private SqlSession sqlSession;
 
     @Test
     void selectCityById() {

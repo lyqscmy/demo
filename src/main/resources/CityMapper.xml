@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.demo.Mapper.CityMapper">
+<mapper namespace="com.example.demo.mapper.CityMapper">
     <select id="selectCityById" resultType="City">
         select id_, state from city where id_ = #{id}
     </select>

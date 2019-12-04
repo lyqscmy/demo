@@ -4,9 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.example.demo"/>
+        <package name="com.example.demo.model"/>
     </typeAliases>
     <mappers>
         <mapper resource="CityMapper.xml"/>
+        <mapper resource="RecordMapper.xml"/>
     </mappers>
 </configuration>
